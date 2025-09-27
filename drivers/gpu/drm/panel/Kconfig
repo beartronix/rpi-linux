@@ -8,6 +8,16 @@ config DRM_PANEL
 menu "Display Panels"
 	depends on DRM && DRM_PANEL
 
+config DRM_PANEL_HX8399C
+    bool "HX8399C DSI Panel Driver"
+    help
+      Support for VXT HX8399C DSI panels.
+
+config DRM_PANEL_VXT_VL050
+    bool "VXT VL050 DSI Panel Driver"
+    help
+      Support for VXT VL050 DSI panels.
+
 config DRM_PANEL_ABT_Y030XX067A
 	tristate "ABT Y030XX067A 320x480 LCD panel"
 	depends on OF && SPI
@@ -1222,3 +1232,4 @@ config DRM_PANEL_XINPENG_XPP055C272
 	  XPP055C272 controller for 720x1280 LCD panels with MIPI/RGB/SPI
 	  system interfaces.
 endmenu
+
