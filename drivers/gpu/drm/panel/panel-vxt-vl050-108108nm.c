@@ -81,6 +81,19 @@ static int vxt_panel_init(struct vxt_panel *vxt)
 		return ret;
 	}
 
+	ret = mipi_dsi_dcs_write(dsi, MIPI_DCS_WRITE_CONTROL_DISPLAY, (u8[]){ 0x24 }, 1);
+	if (ret < 0) {
+		dev_err(dev, "failed to write control display: %d\n", ret);
+		return ret;
+	}
+
+	ret = mipi_dsi_dcs_set_display_brightness(dsi, 0xFFFF);
+	if (ret < 0) {
+		dev_err(dev, "mipi_dsi_dcs_set_display_brightness() returned %d\n", ret);
+		return ret;
+	}
+
+
 	// ret = mipi_dsi_dcs_set_column_address(dsi, 0, vxt->mode->hdisplay - 1);
 	// if (ret < 0) {
 	// 	dev_err(dev, "failed to set column address: %d\n", ret);
