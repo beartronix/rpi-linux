@@ -522,5 +522,5 @@ static struct mipi_dsi_driver vxt_panel_driver = {
 module_mipi_dsi_driver(vxt_panel_driver);
 
 MODULE_AUTHOR("Stefan Egger <office@beartronics.at>");
-MODULE_DESCRIPTION("VXT VL050-108108NM 5 inch circular display");
+MODULE_DESCRIPTION("VXT VL050-108108NM 5inch 1080x1080 circular display");
 MODULE_LICENSE("GPL v2");
