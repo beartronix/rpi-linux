@@ -123,5 +123,4 @@ obj-$(CONFIG_DRM_PANEL_WAVESHARE_TOUCHSCREEN_V2) += panel-waveshare-dsi-v2.o
 obj-$(CONFIG_DRM_PANEL_WIDECHIPS_WS2401) += panel-widechips-ws2401.o
 obj-$(CONFIG_DRM_PANEL_XINPENG_XPP055C272) += panel-xinpeng-xpp055c272.o
 
-obj-$(CONFIG_DRM_PANEL_HX8399C) += panel-hx8399c.o
 obj-$(CONFIG_DRM_PANEL_VXT_VL050) += panel-vxt-vl050-108108nm.o
