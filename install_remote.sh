@@ -22,8 +22,8 @@ make ARCH=$KARCH CROSS_COMPILE=$CROSS INSTALL_DTBS_PATH=$target/boot/firmware dt
 make ARCH=$KARCH CROSS_COMPILE=$CROSS INSTALL_MOD_PATH=$target modules_install > /dev/null
 cp arch/arm64/boot/Image $target/boot/firmware/kernel_2712.img
 
-# rm symlink, we don't wanna copy everything over there...
-rm /tmp/rpicm5kernel/lib/modules/6.12.47-v8+/build
+# rm symlink to kernel source tree — don't copy the whole tree to the Pi
+find $tmpDir/lib/modules/ -maxdepth 2 -name build -type l -delete
 
 scp -q -r $target/boot			root@$remote:/
 scp -q -r $target/lib			root@$remote:/usr

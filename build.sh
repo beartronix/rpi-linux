@@ -7,7 +7,7 @@ KARCH=arm64
 CROSS=aarch64-linux-gnu-
 
 # Go to kernel source directory
-make ARCH=$KARCH CROSS_COMPILE=$CROSS bcm2711_defconfig
+make ARCH=$KARCH CROSS_COMPILE=$CROSS bcm2712_defconfig
 
 cat .config | grep "VL050=y"
 
